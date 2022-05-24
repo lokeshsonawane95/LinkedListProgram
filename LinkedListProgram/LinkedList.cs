@@ -122,6 +122,29 @@ namespace LinkedListProgram
             head = head.next;
         }
 
+        //for deleting the last node
+        internal void PopLast()
+        {
+            Node newNode = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            if (head.next == null)
+            {
+                this.head = null;
+            }
+            //while the node next to the next node of newNode does not get null
+            while (newNode.next.next != null)
+            {
+                //Move newNode to the next node
+                newNode = newNode.next;
+            }
+            //Remove the reference of the last but one node's next to make it the new last node
+            newNode.next = null;
+        }
+
         //For displaying all elements in Linked List
         internal void Display()
         {
