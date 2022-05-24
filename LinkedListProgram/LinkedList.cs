@@ -170,6 +170,33 @@ namespace LinkedListProgram
             }
         }
 
+        //For inserting node after a specific value
+        //To insert node after a specific node we have to find/search that node in our list
+        internal void AddAfter(int value, int data)
+        {
+            Node tempHead = head;
+            Node newNode = new Node(data);
+
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+
+            while (tempHead.next != null)
+            {
+                //If our desired value is found in the list after which we want to insert our node
+                if (tempHead.data == value)
+                {
+                    Console.WriteLine(newNode.data + " is inserted after " + tempHead.data);
+                    newNode.next = tempHead.next;
+                    tempHead.next = newNode;
+                    break;
+                }
+                tempHead = tempHead.next;
+            }
+        }
+
         //For displaying all elements in Linked List
         internal void Display()
         {
