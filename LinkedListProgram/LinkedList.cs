@@ -197,6 +197,45 @@ namespace LinkedListProgram
             }
         }
 
+        //For deleting a specific value from the list
+        //To delete a specific node we have to find/search the node present before the node we want to delete
+        internal void DeleteValue(int value)
+        {
+            Node tempHead = head;
+
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            //while temporary head's (tempHead) next node's data is not entered value
+            while (tempHead.next != null)
+            {
+                //If our desired value is found in the list after which we want to insert our node
+                if (tempHead.next.data == value)
+                {
+                    tempHead.next = tempHead.next.next;
+                    Console.WriteLine("The value " + value + " is deleted from the list");
+                }
+                tempHead = tempHead.next;
+            }
+        }
+
+        //To find size of the list
+        internal void Size()
+        {
+            //Declaring variable size to count nodes
+            int size = 0;
+
+            Node tempHead = head;
+            while (tempHead != null)
+            {
+                tempHead = tempHead.next;
+                size++;
+            }
+            Console.WriteLine("Linked List size is : " + size);
+        }
+
         //For displaying all elements in Linked List
         internal void Display()
         {
