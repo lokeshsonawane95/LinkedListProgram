@@ -15,6 +15,7 @@ namespace LinkedListProgram
                 Console.WriteLine("4. Insert 30 between 56 and 70");
                 Console.WriteLine("5. Delete first element in list of sequence 56->30->70");
                 Console.WriteLine("6. Delete last element in list of sequence 56->30->70");
+                Console.WriteLine("7. Search Linked List to find node with value 30");
                 Console.WriteLine("0. Exit");
                 Console.Write("Enter your choice : ");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -69,6 +70,14 @@ namespace LinkedListProgram
                         list6.PopLast();
                         Console.Write("After deleting last node ");
                         list6.Display();
+                        break;
+                    case 7:
+                        LinkedList list7 = new LinkedList();
+                        list7.Append(56);
+                        list7.Append(30);
+                        list7.Append(70);
+                        list7.Display();
+                        list7.Search(30);
                         break;
                     default:
                         Console.WriteLine("Please enter correct choice");

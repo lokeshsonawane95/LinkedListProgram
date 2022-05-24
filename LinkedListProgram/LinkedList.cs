@@ -145,6 +145,31 @@ namespace LinkedListProgram
             newNode.next = null;
         }
 
+        //For searching a node
+        internal void Search(int value)
+        {
+            Node tempHead = head;
+
+            //Declaring variable position to record the position of our tempHead node
+            int position = 1;
+
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            while (tempHead.next != null)
+            {
+                //If our desired value is found in the list
+                if (tempHead.data == value)
+                {
+                    Console.WriteLine("Value " + value + " is found at position " + position);
+                }
+                tempHead = tempHead.next;
+                position++;
+            }
+        }
+
         //For displaying all elements in Linked List
         internal void Display()
         {
