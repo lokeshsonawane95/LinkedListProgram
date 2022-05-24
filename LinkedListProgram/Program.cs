@@ -11,6 +11,7 @@ namespace LinkedListProgram
             {
                 Console.WriteLine("\n1. Create simple Linked List of 56, 30 and 70");
                 Console.WriteLine("2. Create Linked List by Adding 30 and 56 to 70");
+                Console.WriteLine("3. Create Linked List by Appending 30 and 56 to 70");
                 Console.WriteLine("0. Exit");
                 Console.Write("Enter your choice : ");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -30,6 +31,13 @@ namespace LinkedListProgram
                         list2.Add(30);
                         list2.Add(56);
                         list2.Display();
+                        break;
+                    case 3:
+                        LinkedList list3 = new LinkedList();
+                        list3.Append(56);
+                        list3.Append(30);
+                        list3.Append(70);
+                        list3.Display();
                         break;
                     default:
                         Console.WriteLine("Please enter correct choice");
