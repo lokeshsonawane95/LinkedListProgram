@@ -9,3 +9,4 @@
 7. Search LinkedList to find Node with value 30
 8. Insert 40 after 30 to the Linked List sequence of 56->30->70
 9. Delete 40 from the Linked List sequence of 56->30->40->70 and show the size of LinkedList is 3
+10. Ordered linked list in ascending order of data entered in following sequence 56, 30, 40 and 70
